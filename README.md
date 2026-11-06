@@ -1,8 +1,10 @@
 **English** · [Français](README.fr.md)
 
+**Anthony Hunt** · [Project page on ingevision.cloud](https://ingevision.cloud/?lang=en&p=mod-tournage) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [GitHub profile](https://github.com/anthohunt)
+
 > Showcase repository: the code and data of this project are private; this README describes it.
 
-# Filming mod
+# Demo video mod
 
 A module for a command-line coding assistant that produces demo videos narrated by a synthetic voice, either filmed on the real application or animated.
 
