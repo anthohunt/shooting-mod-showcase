@@ -19,7 +19,13 @@
 
 ## Architecture
 
-![mod tournage architecture: you approve the scenario; the lead session gives one agent per sequence; the voice sets the pace, the agent films or animates, the audit approves the clip for the editing table; the table is published online on a VPS, reviewers comment there and the comments are brought back](docs/architecture.en.svg)
+![mod tournage architecture: you approve the scenario; the lead session gives one agent per sequence; the voice sets the pace, the agent films or animates, the audit approves the clip for the editing table; the table is published online on a VPS, reviewers comment there and the comments are brought back](docs/architecture.svg)
+
+<details><summary>French version</summary>
+
+![Architecture du mod tournage : vous validez le scénario ; la session chef confie une séquence par agent ; la voix donne le rythme, l'agent filme ou anime, l'audit valide le clip pour la table de montage ; la table est mise en ligne sur un VPS, les relecteurs y commentent et les commentaires sont rapatriés](docs/architecture.fr.svg)
+
+</details>
 
 ## Status
 

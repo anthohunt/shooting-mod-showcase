@@ -21,6 +21,12 @@
 
 ![Architecture du mod tournage : vous validez le scénario ; la session chef confie une séquence par agent ; la voix donne le rythme, l'agent filme ou anime, l'audit valide le clip pour la table de montage ; la table est mise en ligne sur un VPS, les relecteurs y commentent et les commentaires sont rapatriés](docs/architecture.svg)
 
+<details><summary>Diagramme en français</summary>
+
+![Architecture du mod tournage : vous validez le scénario ; la session chef confie une séquence par agent ; la voix donne le rythme, l'agent filme ou anime, l'audit valide le clip pour la table de montage ; la table est mise en ligne sur un VPS, les relecteurs y commentent et les commentaires sont rapatriés](docs/architecture.fr.svg)
+
+</details>
+
 ## État
 
 - **Depuis octobre 2026.** Construit en faisant une démo de 16 séquences de SuMo, un jeu de chaîne logistique sur le web et en VR (7 min 16, table privée).
