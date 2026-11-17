@@ -1,43 +1,36 @@
 [English](README.md) · **Français**
 
-**Anthony Hunt** · [Fiche du projet sur ingevision.cloud](https://ingevision.cloud/?p=mod-tournage) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [Profil GitHub](https://github.com/anthohunt)
+# mod tournage
 
-> Dépôt vitrine : le code et les données de ce projet sont privés ; ce README le décrit.
+**Un mod de Claude Code qui fait d'un scénario une vidéo de démonstration commentée : un agent par séquence filme la vraie application ou anime un schéma, au rythme d'une voix de synthèse, et des relecteurs commentent sur une table de montage partagée.**
 
-# Mod tournage
+[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (cliquer pour la vidéo complète)](docs/demo.gif)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
 
-Un module pour un assistant de programmation en ligne de commande, qui fabrique des vidéos de démonstration commentées par une voix de synthèse, filmées sur l'application réelle ou animées.
+*La table de montage en ligne en usage : une vidéo animée faite avec le mod, puis des clips d'un jeu VR, un commentaire à l'instant précis et un commentaire sur le script. [Vidéo complète (1:49)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)*
 
-## Le problème
+## Ce qu'on fait avec
 
-Une vidéo de démonstration demande d'écrire un texte, de l'enregistrer, de filmer l'application au bon rythme, puis de monter le tout. Tout est à refaire à chaque version du logiciel. Le mod confie ces tâches à des agents, et garde l'auteur aux commandes : il valide le scénario, regarde la vidéo et corrige. Il sert aux démos de logiciels et aux présentations de projets.
+- **Scénario.** `/tournage <démo>` ouvre le projet et Claude écrit le scénario, séquence par séquence. Un titre qui finit par « · filmée » se tourne sur l'application ; les autres sont animées.
+- **La voix d'abord.** Chaque séquence est lue en une seule prise edge-tts. Les pauses viennent de la ponctuation et de ce dont l'image a besoin ; au-delà de 3,5 s, une alerte au lieu d'une pause.
+- **Un agent par séquence.** Il filme l'application (web dans Chrome, ou casque VR) ou rend une animation SVG et GSAP image par image, au rythme de la voix.
+- **Audit.** Chaque clip, puis la vidéo assemblée, est contrôlé (sauts, plans figés, images vides, silences) avant d'être montré.
+- **Table de montage.** Les clips bout à bout, le script qui défile à côté. Un commentaire « à traiter » renvoie seulement sa séquence à son agent. Les versions V1, V2… gardent leur script et leurs commentaires.
+- **Relecture en ligne.** Une adresse par démo. Les relecteurs donnent un nom, sans compte ; leurs commentaires reviennent dans la table locale.
 
-## Comment ça marche
+## Architecture
 
-- **Scénario** : l'agent regarde l'application et écrit le scénario séquence par séquence. Un titre qui finit par « · filmée » se tourne sur l'application, les autres séquences sont animées.
-- **Tournage** : une séquence par agent. Séquence filmée : l'agent répète puis filme l'application (web ou casque VR) au rythme de la voix. Séquence animée : une infographie SVG animée, rendue image par image.
-- **Voix** : toute la narration d'une séquence est lue en une seule prise. Les pauses partent de la ponctuation (environ 1 s entre deux phrases, 0,35 s sur une virgule) et s'allongent quand l'image a besoin de temps, jusqu'à 3,5 s ; au-delà, une alerte.
-- **Contrôle** : chaque clip, puis la vidéo assemblée, passe un audit (sauts, plans figés, images vides, silences) avant d'être montré.
-- **Table de montage** : les clips bout à bout, le script qui défile avec le mot prononcé surligné, des commentaires horodatés. Une correction renvoie la séquence au tournage.
+![Architecture du mod tournage : vous validez le scénario ; la session chef confie une séquence par agent ; la voix donne le rythme, l'agent filme ou anime, l'audit passe le clip à la table de montage ; la table est mise en ligne sur un VPS, les relecteurs y commentent et les commentaires sont rapatriés](docs/architecture.svg)
 
-## Ce qui est construit
+## État
 
-- En service, en deux étapes : scénario, puis tournage.
-- Table de montage en ligne : chaque démo a son adresse, les relecteurs commentent sous leur nom, sans compte (30 commentaires par tranche de 10 minutes, 2 000 signes chacun).
-- Versions figées (V1, V2…) : chaque version garde son script et ses commentaires.
-- Style des séquences animées : une bible tirée de l'analyse de 20 vidéos de vulgarisation, avec 16 règles vérifiables ; chaque séquence passe la critique d'un agent neuf.
-- Rendu en parallèle sur plusieurs navigateurs : 951 images par minute avec 12 navigateurs, plateau au-delà, sur un portable à 32 fils.
-- Vidéos produites : une démo de 16 séquences (7 min 16) et la présentation « Le mode La boucle » (15 min 52). Les vidéos de ce site sont faites avec ce mod.
+- **Depuis octobre 2026.** Construit en faisant une démo de 16 séquences d'un jeu de chaîne logistique, sur le web et en VR (7 min 16).
+- **Vidéos.** Une présentation de La Boucle de 15 min 52 et sa version anglaise (15 min 54), et un pitch en anglais de 4 minutes.
+- **Tables publiques.** [La Boucle, pitch en anglais](https://montage.ingevision.cloud/la-boucle-en/) · [SuMo 2.0, jeu VR](https://montage.ingevision.cloud/sumo2-0/)
+- **Où ça tourne.** Le mod tourne dans Claude Code sur l'ordi de l'auteur : 951 images rendues par minute avec 12 navigateurs, plateau au-delà, sur un portable à 32 fils. La table en ligne est un serveur Python sans dépendance, dans un conteneur Docker derrière Traefik, sur un VPS.
+- **Outils.** Python 3, Node.js, Playwright, edge-tts, ffmpeg, SVG et GSAP.
 
-## Ce qui est public
+---
 
-La table de montage d'une vidéo en anglais est visible : <https://montage.ingevision.cloud/la-boucle-en/>. Le code du mod reste dans un dépôt privé.
+**Anthony Hunt** · [ingevision.cloud](https://ingevision.cloud/?p=mod-tournage) · [LinkedIn](https://www.linkedin.com/in/anthony-hunt-3948a9196) · [GitHub](https://github.com/anthohunt)
 
-## Pile technique
-
-- Python 3 (outils, serveur de la table en ligne dans un conteneur Docker)
-- Node.js (rendu image par image et génération de la voix)
-- edge-tts (voix de synthèse)
-- ffmpeg et ffprobe
-- Google Chrome (répétition et tournage des démos web)
-- SVG et GSAP (animations)
+Le code est privé.
