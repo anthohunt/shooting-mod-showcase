@@ -4,9 +4,15 @@
 
 **Un mod de Claude Code qui fait d'un scénario une vidéo de démonstration commentée, filmée sur la vraie application ou animée, et relue sur une table de montage partagée.**
 
-[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (cliquer pour la vidéo complète)](docs/demo.gif)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
+[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (version anglaise, cliquer pour la vidéo complète)](docs/demo.webp)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
 
-*La table de montage en ligne en usage. [Vidéo complète (1:49)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)*
+<details><summary>Version française</summary>
+
+[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1aDX09CIwpQKxhxKWtaKRUQkpE0sdikNK/view)
+
+</details>
+
+*La table de montage en ligne en usage. [Vidéo complète (1:49)](https://drive.google.com/file/d/1aDX09CIwpQKxhxKWtaKRUQkpE0sdikNK/view)*
 
 ## Ce qu'on fait avec
 

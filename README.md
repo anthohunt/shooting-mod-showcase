@@ -4,9 +4,15 @@
 
 **A Claude Code mod that turns a scenario into a narrated demo video, filmed on the real app or animated, and reviewed on a shared editing table.**
 
-[![The online editing table in use: an animated explainer, clips of a VR game, a timestamped comment and a comment on the script (click for the full video)](docs/demo.gif)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
+[![The online editing table in use: an animated explainer, clips of a VR game, a timestamped comment and a comment on the script (click for the full video)](docs/demo.webp)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
 
-*The online editing table in use; interface in French. [Full video (1:49)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)*
+<details><summary>French version</summary>
+
+[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1aDX09CIwpQKxhxKWtaKRUQkpE0sdikNK/view)
+
+</details>
+
+*The online editing table in use; French interface, English captions. [Full video (1:49)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)*
 
 ## Using it
 
