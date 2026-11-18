@@ -4,15 +4,15 @@
 
 **Un mod de Claude Code qui fait d'un scénario une vidéo de démonstration commentée, filmée sur la vraie application ou animée, et relue sur une table de montage partagée.**
 
-[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (version anglaise, cliquer pour la vidéo complète)](docs/demo.webp)](https://drive.google.com/file/d/1SZoBrUY1-yUUj2OjwhjZSsK4-osTDg5U/view)
+![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (version anglaise)](docs/demo.webp)
 
 <details><summary>Version française</summary>
 
-[![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script (cliquer pour la vidéo complète)](docs/demo.fr.webp)](https://drive.google.com/file/d/1aDX09CIwpQKxhxKWtaKRUQkpE0sdikNK/view)
+![La table de montage en ligne en usage : une vidéo animée, des clips d'un jeu VR, un commentaire horodaté et un commentaire sur le script](docs/demo.fr.webp)
 
 </details>
 
-*La table de montage en ligne en usage. [Vidéo complète (1:49)](https://drive.google.com/file/d/1aDX09CIwpQKxhxKWtaKRUQkpE0sdikNK/view)*
+*La table de montage en ligne en usage.*
 
 ## Ce qu'on fait avec
 
@@ -36,7 +36,7 @@
 ## État
 
 - **Depuis octobre 2026.** Construit en faisant une démo de 16 séquences de SuMo, un jeu de chaîne logistique sur le web et en VR (7 min 16, table privée).
-- **Vidéos.** Une présentation de [La Boucle](https://github.com/anthohunt/la-boucle-module), la méthode de l'auteur pour confier une étape d'un processus à un petit modèle : [en français, 15 min 52](https://drive.google.com/file/d/1TZXAxUeyCGkEj3yFR7hDBZXeerJQxmtA/view) · [en anglais, 15 min 54](https://drive.google.com/file/d/1B0ZIb4txHxiYe0JcUWBq3rJRpRpqhCxr/view).
+- **Vidéos.** Une présentation de [La Boucle](https://github.com/anthohunt/la-boucle-module), la méthode de l'auteur pour confier une étape d'un processus à un petit modèle : ·.
 - **Tables publiques.** [La Boucle, version anglaise de 4 minutes](https://montage.ingevision.cloud/la-boucle-en/) · [SuMo 2.0, refonte VR (4 clips)](https://montage.ingevision.cloud/sumo2-0/)
 - **Où ça tourne.** Claude Code sur le portable de l'auteur (banc de 600 images : 951 images par minute avec 12 navigateurs, plateau au-delà). La table en ligne est un serveur Python sans dépendance, sur un VPS.
 - **Outils.** Python 3, Node.js, Playwright, Chrome, edge-tts, ffmpeg, SVG et GSAP.
